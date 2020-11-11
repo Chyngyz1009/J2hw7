@@ -16,6 +16,13 @@ public class Main {
         addString(b, "input text");
         System.out.println("-------");
 
+        System.out.println("Reverse:");
+        Collections.reverse(b);
+        Iterator<String> iter = b.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next());
+        }
+
         List<String> c = new ArrayList<>();
         ListIterator<String> listIterator = b.listIterator();
         ListIterator<String> strIterator = a.listIterator();
@@ -48,8 +55,12 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine();
             list.add(s);
+
+            Iterator<String> iter = list.iterator();
+            while (iter.hasNext()) {
+                System.out.println(iter.next());
+            }
         }
-        System.out.println(list);
     }
 }
 
